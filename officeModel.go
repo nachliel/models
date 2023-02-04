@@ -48,7 +48,7 @@ type SpactialResponse struct {
 type candidate struct {
 	Address  string    `json:"address"`
 	Location Locations `json:"location"`
-	Score    int       `json:"score"`
+	Score    float64   `json:"score"`
 	Extent   Extents   `json:"extent"`
 }
 
