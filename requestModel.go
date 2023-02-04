@@ -85,3 +85,11 @@ type RequestSummery struct {
 	Status         string
 	Error          string
 }
+
+type RabbitMessage struct {
+	Time         time.Time `json:"time"`
+	UserID       string    `json:"user_id"`
+	RequestID    int       `json:"request_id"`
+	Address      string    `json:"address"`
+	PaymentToken string    `json:"payment_token"`
+}
