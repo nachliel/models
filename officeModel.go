@@ -7,7 +7,7 @@ import (
 // Office is the structure for database v1.1
 type Office struct {
 	gorm.Model
-	Fid          string
+	Fid          int
 	GlobalID     string
 	AreaName     string
 	Link         string
@@ -22,6 +22,7 @@ type Office struct {
 // OfficeResponse is the response after you have SpacialReferences
 type OfficeResponse struct {
 	Features []Feature `json:"features"`
+	Error    OfficeError
 }
 
 type Feature struct {
@@ -36,8 +37,13 @@ type Attribute struct {
 	Palkid   string `json:"Palkid"`
 	Tel      string `json:"Tel"`
 	EzorName string `json:"ezor_name"`
-	FID      string `json:"FID"`
+	FID      int    `json:"FID"`
 	GlobalID string `json:"GlobalID"`
+}
+
+type OfficeError struct {
+	Code    int    `json:"code"`
+	Message string `json:"message"`
 }
 
 // SpactialResponse is the first inquiry response for address coordiantes
