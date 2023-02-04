@@ -21,8 +21,8 @@ type Office struct {
 
 // OfficeResponse is the response after you have SpacialReferences
 type OfficeResponse struct {
-	Features []Feature `json:"features"`
-	Error    OfficeError
+	Features []Feature    `json:"features"`
+	Error    *OfficeError `json:"error"`
 }
 
 type Feature struct {
