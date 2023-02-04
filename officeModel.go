@@ -10,7 +10,7 @@ type Office struct {
 	Fid          string
 	GlobalID     string
 	AreaName     string
-	link         string
+	Link         string
 	Phone        string
 	Fax          string
 	Address      string
@@ -36,7 +36,7 @@ type Attribute struct {
 	Palkid   string `json:"Palkid"`
 	Tel      string `json:"Tel"`
 	EzorName string `json:"ezor_name"`
-	FID      int    `json:"FID"`
+	FID      string `json:"FID"`
 	GlobalID string `json:"GlobalID"`
 }
 
