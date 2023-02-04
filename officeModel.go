@@ -4,7 +4,7 @@ import (
 	"gorm.io/gorm"
 )
 
-// Office is the structure for database
+// Office is the structure for database v1.1
 type Office struct {
 	gorm.Model
 	Fid          string
