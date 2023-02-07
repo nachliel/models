@@ -13,6 +13,7 @@ const (
 	ClassTypeTenant           = "tenant"
 	ClassTypeSharedHouseOwner = "apartment"
 	ClassTypeRenter           = "renter"
+	ClassTypePower            = "empower"
 
 	RequestStatusOpen       = "open"
 	RequestStatusSubmit     = "submit"
