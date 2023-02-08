@@ -8,6 +8,18 @@ import (
 	"gorm.io/gorm"
 )
 
+const (
+	UserRoleAdmin     = "admin"
+	UserRoleModerator = "mode"
+	UserRoleUser      = "user"
+	UserRoleGuest     = "guest"
+
+	UserStatusActive   = "active"
+	UserStatusInactive = "inactive"
+	UserStatusLocked   = "locked"
+	UserStatusDeleted  = "deleted"
+)
+
 type Model struct {
 	gorm.Model
 	ID uuid.UUID `gorm:"primary_key;not null;default:gen_random_uuid()"`
@@ -27,6 +39,8 @@ type Client struct {
 	TempPassTime time.Time
 	LastLogin    time.Time
 	FailedLogin  int8
+	Toll         int
+	Fee          int
 	Status       string
 	SessionID    string
 	SessionStart time.Time

@@ -49,6 +49,7 @@ type Request struct {
 	ReasonDevelopmentIssue bool
 	ReasonAgriIssue        bool
 	ReasonOtherIssue       bool
+	PaymentShekel          int
 	TollPayment            string
 	AttachAuthFile         string
 	AttachSigningFile      string
