@@ -70,30 +70,6 @@ type Extents struct {
 	Ymax float64 `json:"ymax"`
 }
 
-/*
-"features": [
-        {
-            "attributes": {
-                "FID": 28164,
-                "GUSH_NUM": 12826,
-                "GUSH_SUFFI": 0,
-                "SUB_GUSH_I": 29338,
-                "STATUS": 1,
-                "STATUS_TEX": "חדש רשום",
-                "LOCALITY_I": 1167,
-                "LOCALITY_N": "קיסריה",
-                "REG_MUN_ID": 15,
-                "REG_MUN_NA": "חוף הכרמל",
-                "COUNTY_ID": 32,
-                "COUNTY_NAM": "חדרה",
-                "REGION_ID": 3,
-                "REGION_NAM": "חיפה",
-                "IS_ANALITY": 0,
-                "ANALITY_DA": " ",
-                "Shape__Area": 202343.196083069,
-                "Shape__Length": 1819.57075306325
-            },
-*/
 // GushResponse is the struct type of Gush inquiry.
 type GushResponse struct {
 	Features []FeatureGush `json:"features"`
@@ -113,14 +89,5 @@ type AttributeGush struct {
 }
 
 type Geometry struct {
-	Rings []Ring `json:"rings"`
-}
-type Ring struct {
-	Ringss []Polygon
-}
-type Polygon struct {
-	PolygonCoordinates []PolygonCoordinates
-}
-type PolygonCoordinates struct {
-	Coordinate []float64
+	Rings [][][]float64 `json:"rings"`
 }
