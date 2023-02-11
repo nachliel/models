@@ -93,5 +93,6 @@ type RabbitMessage struct {
 	UserID       string    `json:"user_id"`
 	RequestID    int       `json:"request_id"`
 	Address      string    `json:"address"`
+	Gush         int       `json:"gush"`
 	PaymentToken string    `json:"payment_token"`
 }
